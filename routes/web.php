@@ -16,3 +16,4 @@ Route::prefix('admin')->name('kehadiran.')->group(function () {
     Route::post('/kehadiran/{registration}', [AttendanceController::class, 'simpan'])->name('simpan');
     Route::get('/laporan', [ReportController::class, 'tampilkan'])->name('laporan');
 });
+require __DIR__.'/Pendaftaran.php';
