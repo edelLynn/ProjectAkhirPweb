@@ -9,18 +9,11 @@ class Attendance extends Model
 {
     public $timestamps = false;
 
-    protected $fillable = [
-        "registration_id",
-        "status",
-        "waktu_dicatat",
-        "catatan",
-    ];
+    protected $fillable = ['registration_id', 'status', 'waktu_dicatat', 'catatan'];
 
-    public function casts(): array
+    protected function casts(): array
     {
-        return [
-            "waktu_dicatat" => "datetime",
-        ];
+        return ['waktu_dicatat' => 'datetime'];
     }
 
     public function registration(): BelongsTo
