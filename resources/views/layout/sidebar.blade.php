@@ -41,15 +41,15 @@
                         <i class="bi bi-clipboard-check" aria-hidden="true"></i> Pendaftaran
                     </a>
                 @endif
-                @if ($user->role === 'admin' && Route::has('attendances.index'))
-                    <a href="{{ route('attendances.index') }}"
-                       class="side-link {{ request()->routeIs('attendances.*') ? 'active' : '' }}">
+                @if ($user->role === 'admin' && Route::has('kehadiran.kegiatan'))
+                    <a href="{{ route('kehadiran.kegiatan') }}"
+                       class="side-link {{ request()->routeIs('kehadiran.*') ? 'active' : '' }}">
                         <i class="bi bi-person-check" aria-hidden="true"></i> Kehadiran
                     </a>
                 @endif
-                @if ($user->role === 'admin' && Route::has('reports.index'))
-                    <a href="{{ route('reports.index') }}"
-                       class="side-link {{ request()->routeIs('reports.*') ? 'active' : '' }}">
+                @if ($user->role === 'admin' && Route::has('kehadiran.laporan'))
+                    <a href="{{ route('kehadiran.laporan') }}"
+                       class="side-link {{ request()->routeIs('kehadiran.laporan') ? 'active' : '' }}">
                         <i class="bi bi-file-earmark-bar-graph" aria-hidden="true"></i> Laporan
                     </a>
                 @endif

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layout.app')
 
 @section('content')
     <h1 class="text-2xl font-bold mb-4">Kehadiran Kegiatan</h1>
