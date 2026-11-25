@@ -1,4 +1,4 @@
-@extends('layouts.guest')
+@extends('layout.guest')
 
 @section('title', 'Masuk')
 

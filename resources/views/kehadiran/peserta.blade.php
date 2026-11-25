@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layout.app')
 
 @section('content')
     <a href="{{ route('kehadiran.kegiatan') }}" class="text-blue-600 hover:underline text-sm">&larr; Kembali</a>

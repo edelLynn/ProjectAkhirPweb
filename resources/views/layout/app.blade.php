@@ -19,10 +19,10 @@
         </button>
         <span class="brand"><span class="brand-mark"><i class="bi bi-calendar-event" aria-hidden="true"></i></span>Eventra</span>
     </header>
-    @include('layouts.sidebar')
+    @include('layout.sidebar')
     <div class="app-main">
         <main id="konten" class="content">
-            @include('layouts.alerts')
+            @include('layout.alerts')
             @yield('content')
         </main>
     </div>
