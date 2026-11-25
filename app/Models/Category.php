@@ -1,5 +1,5 @@
-<?php
 
+<<<<<<< Updated upstream
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
@@ -16,3 +16,5 @@ class Category extends Model
         return $this->hasMany(Event::class);
     }
 }
+=======
+>>>>>>> Stashed changes
