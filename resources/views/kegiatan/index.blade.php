@@ -1,5 +1,5 @@
 
-@extends('layouts.app')
+@extends('layout.app')
 
 @section('content')
 <div class="container mt-4">
@@ -7,22 +7,12 @@
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h2>Manajemen Kegiatan</h2>
 
-        <a href="{{ route('kegiatan.create') }}" class="btn btn-primary">
-            + Tambah Kegiatan
-        </a>
+        <div class="d-flex gap-2">
+            {{-- baru --}}
+            <a href="{{ route('kategori.index') }}" class="btn btn-outline-secondary">Kelola Kategori</a>
+            <a href="{{ route('kegiatan.create') }}" class="btn btn-primary">+ Tambah Kegiatan</a>
+        </div>
     </div>
-
-    @if (session('sukses'))
-        <div class="alert alert-success">
-            {{ session('sukses') }}
-        </div>
-    @endif
-
-    @if (session('error'))
-        <div class="alert alert-danger">
-            {{ session('error') }}
-        </div>
-    @endif
 
     <div class="card shadow-sm">
         <div class="card-body">
@@ -46,7 +36,7 @@
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $event->judul }}</td>
-                                <td>{{ $event->nama_kategori }}</td>
+                                <td>{{ $event->category?->nama ?? '-' }}</td>
                                 <td>{{ $event->tanggal }}</td>
                                 <td>{{ $event->waktu_mulai ?? '-' }}</td>
                                 <td>{{ $event->lokasi ?? '-' }}</td>

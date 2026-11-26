@@ -1,5 +1,5 @@
 
-@extends('layouts.app')
+@extends('layout.app')
 
 @section('content')
 <div class="container mt-4">
@@ -7,22 +7,11 @@
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h2>Manajemen Kategori</h2>
 
+        {{-- baru --}}
         <a href="{{ route('kategori.create') }}" class="btn btn-primary">
             + Tambah Kategori
         </a>
     </div>
-
-    @if (session('sukses'))
-        <div class="alert alert-success">
-            {{ session('sukses') }}
-        </div>
-    @endif
-
-    @if (session('error'))
-        <div class="alert alert-danger">
-            {{ session('error') }}
-        </div>
-    @endif
 
     <div class="card shadow-sm">
         <div class="card-body">

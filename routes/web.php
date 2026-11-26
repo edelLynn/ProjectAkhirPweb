@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Route;
 require __DIR__ . '/kegiatan.php';
 require __DIR__ . '/peserta.php';
 require __DIR__ . '/pendaftaran.php';
+require __DIR__ . '/mahasiswa.php';
 require __DIR__ . '/kehadiran.php';
 
 Route::prefix('admin')->name('kehadiran.')->group(function () {
@@ -16,3 +17,4 @@ Route::prefix('admin')->name('kehadiran.')->group(function () {
     Route::post('/kehadiran/{registration}', [AttendanceController::class, 'simpan'])->name('simpan');
     Route::get('/laporan', [ReportController::class, 'tampilkan'])->name('laporan');
 });
+require __DIR__.'/Pendaftaran.php';

@@ -27,23 +27,22 @@
                     </a>
                 @endif
 
-                {{-- Menu modul lain: muncul otomatis kalau route-nya sudah ada.
-                     Sesuaikan nama route dengan milik masing-masing anggota. --}}
-                @if (Route::has('events.index'))
-                    <a href="{{ route('events.index') }}"
-                       class="side-link {{ request()->routeIs('events.*') ? 'active' : '' }}">
+
+                @if ($user->role === 'admin' && Route::has('kegiatan.index'))
+                    <a href="{{ route('kegiatan.index') }}"
+                       class="side-link {{ request()->routeIs('kegiatan.*') ? 'active' : '' }}">
                         <i class="bi bi-calendar-event" aria-hidden="true"></i> Kegiatan
                     </a>
                 @endif
-                @if ($user->role === 'admin' && Route::has('registrations.index'))
-                    <a href="{{ route('registrations.index') }}"
-                       class="side-link {{ request()->routeIs('registrations.*') ? 'active' : '' }}">
+                @if ($user->role === 'mahasiswa' && Route::has('pendaftaran.index'))
+                    <a href="{{ route('pendaftaran.index') }}"
+                       class="side-link {{ request()->routeIs('pendaftaran.*') ? 'active' : '' }}">
                         <i class="bi bi-clipboard-check" aria-hidden="true"></i> Pendaftaran
                     </a>
                 @endif
                 @if ($user->role === 'admin' && Route::has('kehadiran.kegiatan'))
                     <a href="{{ route('kehadiran.kegiatan') }}"
-                       class="side-link {{ request()->routeIs('kehadiran.*') ? 'active' : '' }}">
+                       class="side-link {{ request()->routeIs('kehadiran.kegiatan') ? 'active' : '' }}">
                         <i class="bi bi-person-check" aria-hidden="true"></i> Kehadiran
                     </a>
                 @endif

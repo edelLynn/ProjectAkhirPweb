@@ -28,7 +28,7 @@ class AuthController extends Controller
 
         $request->session()->regenerate(); // cegah session fixation
 
-        return redirect()->intended(route('dashboard'));
+        return redirect()->route('dashboard');
     }
 
     public function logout(Request $request): RedirectResponse

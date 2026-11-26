@@ -10,7 +10,8 @@ class Registration extends Model
 {
     public $timestamps = false;
 
-    protected $fillable = ['user_id', 'event_id', 'tanggal_daftar'];
+    //baru
+    protected $fillable = ['user_id', 'event_id', 'tanggal_daftar', 'status'];
 
     protected function casts(): array
     {
